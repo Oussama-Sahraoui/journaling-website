@@ -33,7 +33,7 @@ app.get ("/fetch_journals",(req,res)=>{
 	})
 })
 app.post('/edit_journal',(req,res)=>{
-	console.log("hey senpai eric! editting !")
+	console.log("journal edit console test")
   const journal_name=req.body.journal_name
   const journal_desc=req.body.journal_desc
   const editDate=req.body.editDate
@@ -72,7 +72,7 @@ console.log(req.body)
 } )
 })
 app.delete('/delete_journal',(req,res)=>{
-	console.log("hi eric >~< (we deleting)")
+	console.log("deletion console test")
 	console.log(req.query.ID)
 	db.query(`DELETE FROM journal WHERE ID=?`,[req.query.ID],(err,result)=>{
 		if(err){
